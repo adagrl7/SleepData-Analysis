@@ -17,6 +17,8 @@
       margin: auto;
       padding: 20px;
       background: #fff;
+      border-radius: 8px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     }
     h1, h2, h3 {
       color: #333;
@@ -26,78 +28,115 @@
     }
     .section {
       margin-bottom: 30px;
+      padding: 15px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      background-color: #fafafa;
     }
-    .datafile {
-      font-style: italic;
-      color: #555;
+    img {
+      display: block;
+      margin: 10px auto;
+      width: 80%;
+      max-width: 600px;
+      border-radius: 5px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     }
-    ul {
-      margin-left: 20px;
+    .accordion {
+      background-color: #007acc;
+      color: white;
+      cursor: pointer;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 18px;
+      transition: 0.3s;
+      border-radius: 5px;
+      margin-bottom: 5px;
     }
-    a {
-      color: #007acc;
-      text-decoration: none;
+    .accordion:hover {
+      background-color: #005f99;
     }
-    a:hover {
-      text-decoration: underline;
+    .panel {
+      display: none;
+      padding: 10px;
+      background-color: white;
+      overflow: hidden;
     }
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Visualization Summary</h1>
+
     <h2>Introduction</h2>
     <p>Welcome to my Power BI analysis story! Below is an overview of the dashboard.</p>
-    <img src="images/agegroup.png" alt="Dashboard Overview" width="600">
-    <img src="images/analysis.png" alt="Dashboard Overview" width="600">
-    <img src="images/occupation.png" alt="Dashboard Overview" width="600">
-    <img src="images/health.png" alt="Dashboard Overview" width="600">
-    <img src="images/sleep_duration.png" alt="Dashboard Overview" width="600">
-    <img src="images/sleepvsBP.png" alt="Dashboard Overview" width="600">
-    <div class="section">
-      <h2>Distribution of Sleep-Related Metrics</h2>
-  
-      <ul>
-        <li><strong>Sleep Duration:</strong> The mean sleep duration is approximately 7.13 hours with a standard deviation of 0.80.</li>
-        <li><strong>Quality of Sleep:</strong> The average quality is around 7.31 with a standard deviation of 1.20.</li>
-        <li><strong>Physical Activity Level:</strong> The mean is 59.17 with a higher variability (standard deviation of 20.83).</li>
-        <li><strong>Stress Level:</strong> The average stress level is 5.39 with a standard deviation of 1.77.</li>
-      </ul>
-    </div>
-    
-    <div class="section">
-      <h2>Correlation Analysis</h2>
 
+    <img src="images/agegroup.png" alt="Age Group Analysis">
+    <img src="images/analysis.png" alt="Data Analysis">
+    <img src="images/occupation.png" alt="Occupation Impact">
+    <img src="images/health.png" alt="Health Metrics">
+    <img src="images/sleep_duration.png" alt="Sleep Duration">
+    <img src="images/sleepvsBP.png" alt="Sleep vs. BP">
+
+    <button class="accordion">Distribution of Sleep-Related Metrics</button>
+    <div class="panel">
       <ul>
-        <li><strong>Physical Activity Level and Heart Rate:</strong> The correlation coefficient is 0.137, indicating a weak positive relationship.</li>
+        <li><strong>Sleep Duration:</strong> Mean = 7.13 hrs, Std Dev = 0.80.</li>
+        <li><strong>Quality of Sleep:</strong> Mean = 7.31, Std Dev = 1.20.</li>
+        <li><strong>Physical Activity Level:</strong> Mean = 59.17, Std Dev = 20.83.</li>
+        <li><strong>Stress Level:</strong> Mean = 5.39, Std Dev = 1.77.</li>
       </ul>
     </div>
-    
-    <div class="section">
-      <h2>Impact of Occupation on Sleep Quality</h2>
+
+    <button class="accordion">Correlation Analysis</button>
+    <div class="panel">
       <ul>
-        <li><strong>Highest Average Quality:</strong> Engineers have the highest average quality of sleep at 8.41.</li>
-        <li><strong>Lowest Average Quality:</strong> Sales Representatives have the lowest at 4.0.</li>
+        <li><strong>Physical Activity Level & Heart Rate:</strong> Correlation = 0.137 (weak positive).</li>
       </ul>
     </div>
-    
-    <div class="section">
-      <h2>Visualizations</h2>
+
+    <button class="accordion">Impact of Occupation on Sleep Quality</button>
+    <div class="panel">
       <ul>
-        <li><strong>Histogram of Sleep Duration:</strong> Displays the frequency distribution of sleep duration values.</li>
-        <li><strong>Scatter Plot of Correlation:</strong> Shows the weak positive correlation between physical activity level and heart rate.</li>
-        <li><strong>Bar Chart of Occupation Impact:</strong> Illustrates the average quality of sleep across different occupations.</li>
+        <li><strong>Highest Average Quality:</strong> Engineers (8.41).</li>
+        <li><strong>Lowest Average Quality:</strong> Sales Representatives (4.0).</li>
       </ul>
     </div>
-    
-    <div class="section">
-      <h2>Conclusion and Insights</h2>
+
+    <button class="accordion">Visualizations</button>
+    <div class="panel">
       <ul>
-        <li><strong>Sleep Duration and Quality:</strong> Most individuals have a consistent sleep duration and quality, with slight variations.</li>
-        <li><strong>Occupation Influence:</strong> Occupation significantly impacts sleep quality, with engineers experiencing the best sleep quality.</li>
-        <li><strong>Physical Activity and Heart Rate:</strong> The weak correlation suggests other factors may influence heart rate beyond physical activity levels.</li>
+        <li><strong>Histogram of Sleep Duration:</strong> Frequency distribution of sleep duration.</li>
+        <li><strong>Scatter Plot of Correlation:</strong> Relationship between physical activity and heart rate.</li>
+        <li><strong>Bar Chart of Occupation Impact:</strong> Sleep quality across occupations.</li>
+      </ul>
+    </div>
+
+    <button class="accordion">Conclusion and Insights</button>
+    <div class="panel">
+      <ul>
+        <li><strong>Sleep Duration & Quality:</strong> Generally consistent with slight variations.</li>
+        <li><strong>Occupation Influence:</strong> Engineers experience the best sleep quality.</li>
+        <li><strong>Physical Activity & Heart Rate:</strong> Weak correlation suggests other factors at play.</li>
       </ul>
     </div>
   </div>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+          panel.style.display = "none";
+        } else {
+          panel.style.display = "block";
+        }
+      });
+    }
+  </script>
 </body>
 </html>

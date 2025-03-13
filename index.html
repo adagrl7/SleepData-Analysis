@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visualization Summary</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      padding: 20px;
+      background: #fff;
+    }
+    h1, h2, h3 {
+      color: #333;
+    }
+    p {
+      margin-bottom: 10px;
+    }
+    .section {
+      margin-bottom: 30px;
+    }
+    .datafile {
+      font-style: italic;
+      color: #555;
+    }
+    ul {
+      margin-left: 20px;
+    }
+    a {
+      color: #007acc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Visualization Summary</h1>
+    
+    <div class="section">
+      <h2>Distribution of Sleep-Related Metrics</h2>
+      <p class="datafile">
+        Data File: <a href="distribution_data.csv" target="_blank">distribution_data.csv</a>
+      </p>
+      <ul>
+        <li><strong>Sleep Duration:</strong> The mean sleep duration is approximately 7.13 hours with a standard deviation of 0.80.</li>
+        <li><strong>Quality of Sleep:</strong> The average quality is around 7.31 with a standard deviation of 1.20.</li>
+        <li><strong>Physical Activity Level:</strong> The mean is 59.17 with a higher variability (standard deviation of 20.83).</li>
+        <li><strong>Stress Level:</strong> The average stress level is 5.39 with a standard deviation of 1.77.</li>
+      </ul>
+    </div>
+    
+    <div class="section">
+      <h2>Correlation Analysis</h2>
+      <p class="datafile">
+        Data File: <a href="correlation_data.csv" target="_blank">correlation_data.csv</a>
+      </p>
+      <ul>
+        <li><strong>Physical Activity Level and Heart Rate:</strong> The correlation coefficient is 0.137, indicating a weak positive relationship.</li>
+      </ul>
+    </div>
+    
+    <div class="section">
+      <h2>Impact of Occupation on Sleep Quality</h2>
+      <p class="datafile">
+        Data File: <a href="occupation_sleep_quality_data.csv" target="_blank">occupation_sleep_quality_data.csv</a>
+      </p>
+      <ul>
+        <li><strong>Highest Average Quality:</strong> Engineers have the highest average quality of sleep at 8.41.</li>
+        <li><strong>Lowest Average Quality:</strong> Sales Representatives have the lowest at 4.0.</li>
+      </ul>
+    </div>
+    
+    <div class="section">
+      <h2>Visualizations</h2>
+      <ul>
+        <li><strong>Histogram of Sleep Duration:</strong> Displays the frequency distribution of sleep duration values.</li>
+        <li><strong>Scatter Plot of Correlation:</strong> Shows the weak positive correlation between physical activity level and heart rate.</li>
+        <li><strong>Bar Chart of Occupation Impact:</strong> Illustrates the average quality of sleep across different occupations.</li>
+      </ul>
+    </div>
+    
+    <div class="section">
+      <h2>Conclusion and Insights</h2>
+      <ul>
+        <li><strong>Sleep Duration and Quality:</strong> Most individuals have a consistent sleep duration and quality, with slight variations.</li>
+        <li><strong>Occupation Influence:</strong> Occupation significantly impacts sleep quality, with engineers experiencing the best sleep quality.</li>
+        <li><strong>Physical Activity and Heart Rate:</strong> The weak correlation suggests other factors may influence heart rate beyond physical activity levels.</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>

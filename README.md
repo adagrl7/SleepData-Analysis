@@ -27,8 +27,11 @@ Open the index.html file in your browser.
 📂 Project Structure
 
 📁 Project Root
+
 │-- 📂 images          # Contains all visualization images
+
 │-- 📜 index.html      # Main HTML file with interactive insights
+
 │-- 📜 README.md       # Project documentation
 
 🛠 Technologies Used
